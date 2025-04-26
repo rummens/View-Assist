@@ -23,7 +23,8 @@ styles:
       - padding: 10px
       - border-radius: 10px
       - width: 95%
-      - text-align: start
+      - white-space: normal
+      - overflow: visible
       - text-wrap: wrap
       - justify-content: center
       - align-self: center
