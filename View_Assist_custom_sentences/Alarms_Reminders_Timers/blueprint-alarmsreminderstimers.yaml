@@ -303,6 +303,7 @@ action:
               type: "{{ type }}"
               time: "{{ time }}"
               name: "{{ name }}"
+              language: "{{ language }}"
             response_variable: timer_result
           - set_conversation_response: >-
               {{ translations[language]['responses']['timer_set']
@@ -684,6 +685,7 @@ action:
             data:
               timer_id: "{{ display_timer_id }}"
               time: "{{ new_time }}"
+              language: "{{ language }}"
           - set_conversation_response: "" # no voice response
 
 mode: parallel
