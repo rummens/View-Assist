@@ -6,6 +6,22 @@ blueprint:
   description: Ask Assist to set an alarm, reminder, or timer  (View Assist alarmsreminderstimers v 1.0.0)
   domain: automation
   input:
+    language:
+      name: Language
+      description: Select the language for voice responses
+      default: en
+      selector:
+        select:
+          mode: dropdown
+          options:
+            - value: en
+              label: English
+            - value: de
+              label: Deutsch
+            - value: es
+              label: Español
+            - value: fr
+              label: Français
     alarmsound_path:
       name: Alarm Sound Path
       description: The path to the sound file that will sound repeatedly when the timer expires
@@ -28,21 +44,6 @@ blueprint:
       name: Info
       description: The View Assist dashboard view to use for displaying information about timers
       default: "/view-assist/info"
-    language:
-      name: Language
-      description: Select the language for voice responses
-      default: en
-      selector:
-        select:
-          options:
-            - value: en
-              label: English
-            - value: de
-              label: Deutsch
-            - value: es
-              label: Español
-            - value: fr
-              label: Français
 
     sentences_set_timer:
       name: Sentences - Set Timer
